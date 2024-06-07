@@ -6,6 +6,7 @@ All python scripts have been updated to run with python3.7+ (this may be the cau
 2. sudo apt-get update
 3. sudo apt-get install python3-pip
 4. pip install pylibftdi --break-system-packages
+5. run fmcw3.py script, then the error will show up
 
 
 Related errors:
