@@ -159,11 +159,11 @@ class Writer(Thread):
             try:
                 d = self.queue.get(True, 0.5)
             except Empty:
-                print 'Timeout', wrote
+                print ('Timeout', wrote)
                 self.f.close()
                 return
             if len(d) == 0:
-                print 'Closed', wrote
+                print ('Closed', wrote)
                 self.f.close()
                 return
             else:
@@ -228,6 +228,6 @@ finally:
     fmcw3.set_gpio(pa_off=True)
     fmcw3.clear_buffer()
     fmcw3.close()
-    print 'Done'
+    print ('Done')
     q.put('')
     writer.join()
