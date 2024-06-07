@@ -1,0 +1,14 @@
+Getting to the "USB failed bulk write" error
+
+All python scripts have been updated to run with python3.7+ (this may be the cause of the error, try running everything in python 2.7)
+
+1. Fresh installed ubuntu system
+2. sudo apt-get update
+3. sudo apt-get install python3-pip
+4. pip install pylibftdi --break-system-packages
+
+
+Related errors:
+http://developer.intra2net.com/mailarchive/html/libftdi/2017/msg00014.html
+https://openocd-devel.narkive.com/6Qy6eKib/opment-usb-bulk-write-failures-when-using-ft2232h-dongle
+
