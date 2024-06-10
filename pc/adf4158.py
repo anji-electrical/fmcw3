@@ -118,7 +118,7 @@ class ADF4158():
                 real_delay = d/fpd_freq
 
             self.write_value(ramp_del=1)
-            print 'd', d
+            print ('d', d)
             self.write_value(delay_start_divider=d)
         else:
             real_delay = 0

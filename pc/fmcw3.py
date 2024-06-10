@@ -33,6 +33,7 @@ class FMCW3():
         header = [0xaa, l, cmd]
         b = bytearray(header+x)
         #print map(hex, map(ord, str(b)))
+        self.device.flush_input()
         return self.device.write(str(b))
 
     def clear_gpio(self, led=False, pa_off=False, mix_enbl=False, adf_ce=False):
@@ -209,7 +210,7 @@ len_settings = ''.join(map(chr, [ls & 0xff, (ls >> 8) & 0xff]))
 
 settings = len_settings+settings
 
-q.put(settings)
+q.put(bytes(settings, 'utf-8'))
 
 writer = Writer('fmcw3.log', q)
 writer.start()
